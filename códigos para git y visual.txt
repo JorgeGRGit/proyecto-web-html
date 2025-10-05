@@ -1,0 +1,29 @@
+códigos para git y visual
+
+web github
+https://jorgegrgit.github.io/proyecto-web-html/
+
+
+actualizar archivos manualmente con consola GitHub
+
+git init
+
+git checkout gh-pages
+git status
+
+git add .
+git commit -m ""
+
+# traer cambios remotos primero (evita conflictos)
+
+git pull --rebase origin main   
+git push
+
+usando la extencion 
+1.- ingresar a la pestaña "control de código fuente"
+2.- guarda los cambios ctrl+s
+3.- aparecerá una pestaña de cambios con el nombre del archivo o archivos modificado
+4.- apretar la + en los archivos que queires ahcer los cambios
+5.- arriba en la celda de texto o commit llegar con un comentario el cambio que se realizo
+6.- después apretar en la barra cambios la palomita de ok o check 
+7.- al final apretar sincronizar cambios 
