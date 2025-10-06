@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Confirmación de Cita</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+<nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<a class="flex items-center gap-2 text-primary" href="#">
+<span class="material-symbols-outlined text-3xl">medical_services</span>
+<span class="font-bold text-xl text-gray-900 dark:text-white">HealthFirst</span>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Especialidades</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Médicos</a>
+<a class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Mis Citas</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700/50 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6uovdwsb9V4Wlt-3Hmfe2KG-Id0YX6Wuo8vlVmrlzlgWJK8sEtBKNoABTUy579ubMcwvOOYjW70CtJyW0zA_ZSqppBuMbEooHh9h8EWSrXsYSQ05h0iP28gGEWKre9E9QR_0broQCHARX-D3vCsY7IEET2exWHVxnVw-Pwa27B_jTPzYndC_lVsO2K4TjVf6yCVMaP_R5u3KMG639Z5oS2EuDhOvK8K8Ni4_lQJLQQLVcrsZ6dySitkI9gVujrOYg0l_u-Q4wKUQ");'></div>
+</div>
+</div>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-2xl mx-auto">
+<div class="bg-background-light dark:bg-background-dark/50 rounded-xl shadow-lg p-8 space-y-6 text-center">
+<div class="flex justify-center">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary text-4xl">check_circle</span>
+</div>
+</div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">¡Cita Reservada con Éxito!</h1>
+<p class="text-gray-600 dark:text-gray-400">
+            Hemos confirmado tu cita. A continuación, encontrarás los detalles.
+          </p>
+<div class="border-t border-gray-200 dark:border-gray-700 my-6"></div>
+<div class="text-left space-y-4">
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 font-medium">Especialidad</p>
+<p class="font-semibold text-gray-800 dark:text-gray-200">Cardiología</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 font-medium">Médico</p>
+<p class="font-semibold text-gray-800 dark:text-gray-200">Dr. Ricardo García</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 font-medium">Fecha</p>
+<p class="font-semibold text-gray-800 dark:text-gray-200">15 de Julio de 2024</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-gray-500 dark:text-gray-400 font-medium">Hora</p>
+<p class="font-semibold text-gray-800 dark:text-gray-200">10:00 AM</p>
+</div>
+</div>
+<div class="pt-6">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark">
+              Volver al Inicio
+            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

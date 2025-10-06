@@ -1,50 +1,100 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar scroll</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-gray-200 dark:border-gray-800 px-4 sm:px-6 lg:px-8">
+<div class="container mx-auto flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white">HealthConnect</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Inicio</a>
+<a class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Servicios</a>
+<a class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Doctores</a>
+<a class="text-base font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Contacto</a>
 </nav>
-<!-- contenido principal -->
- <div class="px-4 pt-5 my-5 text-center border-bottom"> <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1> <div class="col-lg-6 mx-auto"> <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5"> <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button> <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> </div> </div> <div class="overflow-hidden" style="max-height: 30vh;"> <div class="container px-5"> <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy"> </div> </div> </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
-</html>
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity">Iniciar Sesión</button>
+</div>
+</header>
+<main class="flex-grow">
+<div class="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYB2FSzy37PgJmXqkRnYG1R1hSsFSPevre2IgULqbiGqd1NDSVPXsCRDfnMBIcYVLDY5BYhJviObNilUFyX2T74SH8Zptl23NfbMR12tiFdG5C6azmt6qZ_b3y4wtY7e6oQ46X5I4czMjeC4gJ0gJ-ZysnXQO-9xb0TzzIJ9NZ3ZGTPbraMn09Kg9AmUuj2bjRdY58JhqI5Q9Vraxca-prBeB3N4mDXf3NSgCzS6V9lLHmeul7pmfoCJOq4rnez9rDaLg5nHGkMfc");'>
+<div class="text-center text-white px-4">
+<h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">Conecta con los mejores profesionales de la salud</h1>
+<p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Reserva citas médicas en línea de forma rápida y segura. Encuentra el especialista adecuado para ti y agenda tu consulta hoy mismo.</p>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:opacity-90 transition-opacity">Reservar una cita</button>
+</div>
+</div>
+<section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Cómo funciona</h2>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Nuestro proceso de reserva es simple y eficiente, diseñado para facilitar el acceso a la atención médica.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 mx-auto mb-6">
+<svg class="text-primary" fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Encuentra a tu especialista</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Busca entre nuestra amplia red de profesionales de la salud y encuentra el especialista que mejor se adapte a tus necesidades.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 mx-auto mb-6">
+<svg class="text-primary" fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Reserva tu cita</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Selecciona la fecha y hora que más te convenga y reserva tu cita en línea de forma instantánea.</p>
+</div>
+<div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 mx-auto mb-6">
+<svg class="text-primary" fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Confirma y asiste</h3>
+<p class="text-base text-gray-600 dark:text-gray-400">Recibe una confirmación de tu cita y asiste a tu consulta con la tranquilidad de saber que tu salud está en buenas manos.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-500 dark:text-gray-400">
+<div class="flex justify-center gap-6 mb-4">
+<a class="text-base hover:text-primary dark:hover:text-primary" href="#">Política de privacidad</a>
+<a class="text-base hover:text-primary dark:hover:text-primary" href="#">Términos de servicio</a>
+<a class="text-base hover:text-primary dark:hover:text-primary" href="#">Contacto</a>
+</div>
+<p class="text-base">© 2024 HealthConnect. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+
+</body></html>

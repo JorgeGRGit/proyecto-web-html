@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reservar Cita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "foreground-light": "#0d171b",
+              "foreground-dark": "#f6f7f8",
+              "card-light": "#ffffff",
+              "card-dark": "#192730",
+              "border-light": "#e7eff3",
+              "border-dark": "#2d3f4b",
+              "muted-light": "#6b7f88",
+              "muted-dark": "#a0b1c0",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7f88' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-card-light dark:bg-card-dark/80 backdrop-blur-sm border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path></svg>
+</div>
+<h1 class="text-xl font-bold">HealthConnect</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-foreground-light dark:text-foreground-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-foreground-light dark:text-foreground-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Buscar</a>
+<a class="text-foreground-light dark:text-foreground-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-foreground-light dark:text-foreground-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">Mi Cuenta</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5QcOIknZLw5XJ2u3RnU-tJMUWqZXursv_jHgL5TJBUU8BiZvKzW5ScqXfY4iIbny2xqAgtOeC7T81zFNd4wnY04FWhQZHWUH-r1GN_xgnyxlGXAga6TcwGkca0e09OIE5VOa6Y6Wi0tTy9-vBVBvo8DI07uFVYeVvQXDX1PoiPxM2Kc-uGI090eWNasHn93mj_k87QIKf4phwc6YQI80jZ_9jRYArQm-cGR7RDEM-lbewDY5ZK7EQM39e1tWvdG-lASSu96lwj98");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="max-w-xl mx-auto bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-6 md:p-8">
+<h2 class="text-2xl md:text-3xl font-bold mb-6">Reservar Cita</h2>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-muted-light dark:text-muted-dark mb-2" for="specialty">Especialidad</label>
+<select class="form-select w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary" id="specialty">
+<option>Seleccionar Especialidad</option>
+<option>Cardiología</option>
+<option>Dermatología</option>
+<option>Pediatría</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-muted-light dark:text-muted-dark mb-2" for="doctor">Médico</label>
+<select class="form-select w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary" id="doctor">
+<option>Seleccionar Médico</option>
+<option>Dr. Juan Pérez</option>
+<option>Dra. Ana Gómez</option>
+<option>Dr. Carlos Sánchez</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-muted-light dark:text-muted-dark mb-2">Fecha</label>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="font-semibold">Mayo 2024</p>
+<button class="p-2 rounded-full hover:bg-card-light dark:hover:bg-card-dark transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm">
+<div class="font-medium text-muted-light dark:text-muted-dark">Do</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Lu</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Ma</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Mi</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Ju</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Vi</div>
+<div class="font-medium text-muted-light dark:text-muted-dark">Sá</div>
+<div class="text-muted-light dark:text-muted-dark/50">28</div>
+<div class="text-muted-light dark:text-muted-dark/50">29</div>
+<div class="text-muted-light dark:text-muted-dark/50">30</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">4</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">5</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">6</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">7</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">8</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">9</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">10</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">11</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">13</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">14</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">15</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">16</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">17</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">18</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">19</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">20</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">21</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">22</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">23</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">24</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">25</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">26</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">27</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">28</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">29</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">30</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">31</button>
+<div class="text-muted-light dark:text-muted-dark/50">1</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-muted-light dark:text-muted-dark mb-2" for="time">Hora</label>
+<select class="form-select w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary" id="time">
+<option>Seleccionar Hora</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+</select>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary transition-all duration-300">
+                                Confirmar Reserva
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
