@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mi Salud - Contacto</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-4">
+<div class="flex items-center gap-3 text-gray-800 dark:text-white">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 onclick="window.location.href='index.html';" class="text-xl font-bold">Mi Salud</h2>
+</div>
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="doctores.html">Especialistas</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90">
+          Reservar Cita
+        </button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSQsA_q312F773NTCTTs9nGVuad-Vzxc3__6lwdwXtbDxTjbTeLOYqr5Dv_oxjMmV47tWBwVpP6jvv8o8zb0rWM3OSBiQnF_NvRvtdqBSDTkPLjbpdmscUM6APoJ-cD4Xaa4NlAVlFT4KcA7pMe6tOxDFe1ReXX__QpPc_j6GD67OQqYPXa-nPMBru52FNO9aWaIARoWZSLH8DK-dn8kvf4f_7TFHCZ9kmE9cDeBXzBrzFsUoLcoaDZRMCErlHG3dm9mLGKJBG-AY");'></div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="space-y-10">
+<div>
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white">Contacto</h1>
+<p class="mt-3 text-lg text-gray-600 dark:text-gray-300">
+              Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos. Estamos aquí para asistirte en todo lo que necesites.
+            </p>
+</div>
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Información de Contacto</h2>
+<div class="space-y-4">
+<div class="flex items-start">
+<span class="w-24 text-sm font-medium text-gray-500 dark:text-gray-400">Dirección</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">Calle Principal 123, Ciudad, País</p>
+</div>
+<div class="flex items-start">
+<span class="w-24 text-sm font-medium text-gray-500 dark:text-gray-400">Teléfono</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">+56 9 1234 5678</p>
+</div>
+<div class="flex items-start">
+<span class="w-24 text-sm font-medium text-gray-500 dark:text-gray-400">Email</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">contacto@misalud.com</p>
+</div>
+<div class="flex items-start">
+<span class="w-24 text-sm font-medium text-gray-500 dark:text-gray-400">Horario</span>
+<p class="text-sm text-gray-700 dark:text-gray-300">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Ubicación</h2>
+<div class="aspect-video w-full rounded-xl overflow-hidden">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8SNj984A94BvtaiU8Z8Yx5v6l-xHM_RV51dAQ8IjDRRQ_zjrJELplbEYpK39RMEniL5eSnmCUxgliFpxU50LkKDYfd0BYbDURw2ulCyf8UC1myfqUzHpCztSevUN1V6uGzTOBAXGds5mkcBFVHFh3kxsXfcLoW8MZW6sJ-3wGg4ovf1e1P9A3yQ-NiOcMFD_0rCs7p3bC9hpbku8ck9O6bL4hQ7fXG12_kfneSR3j57stFn83kcP3M1MoG79gTTYCukBagLYisAc");'></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Envíanos un Mensaje</h2>
+<form class="mt-6 space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="name">Nombre</label>
+<div class="mt-1">
+<input class="form-input block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary" id="name" name="name" placeholder="Tu nombre" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="email">Correo Electrónico</label>
+<div class="mt-1">
+<input class="form-input block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary" id="email" name="email" placeholder="tu@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="message">Mensaje</label>
+<div class="mt-1">
+<textarea class="form-textarea block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Escribe tu consulta aquí..." rows="4"></textarea>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                Enviar Mensaje
+              </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
